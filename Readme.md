@@ -9,15 +9,14 @@ AI Research and Innovation Nexus for Africa (AIRINA)
 AIRINA Labs by AI.Technipreneurs  
 Cotonou, Bénin
 
-**January 31, 2026**  
-Submitted in partial fulfilment of the requirements for the award of  
+ 
 **Master of Science in Mathematical Sciences** at AIMS Senegal
 
 ---
 
 # Abstract
 
-In financial markets, accurately pricing derivative instruments is essential for risk management and understanding market dynamics. However, traditional methods often struggle with complex, high-dimensional, or non-standard scenarios. This thesis explores **Physics-Informed Neural Networks (PINNs)** as an innovative mesh-free approach to solve the Black-Scholes partial differential equation, directly embedding physical laws into the network's loss function. Through systematic implementations and comparisons with classical numerical methods — finite difference schemes (Crank-Nicolson), Monte Carlo simulations, and purely supervised artificial neural networks — we demonstrate that PINNs achieve competitive accuracy (**RMSE ≈ 0.01–0.12**) while offering superior flexibility for extensions such as variable volatility or inverse problems. Despite training challenges (spectral bias, multi-loss instability), PINNs outperform classical paradigms for parametric extensions. These results position PINNs as a next-generation computational infrastructure for quantitative finance, combining mathematical rigor and scalability.
+In financial markets, accurately pricing derivative instruments is essential for risk management and understanding market dynamics. However, traditional methods often struggle with complex, high-dimensional, or non-standard scenarios. This thesis explores **Physics-Informed Neural Networks (PINNs)** as an innovative mesh-free approach to solve the Black-Scholes partial differential equation, directly embedding physical laws into the network's loss function. Through systematic implementations and comparisons with classical numerical methods finite difference schemes (Crank-Nicolson), Monte Carlo simulations, and purely supervised artificial neural networks we demonstrate that PINNs achieve competitive accuracy (**RMSE ≈ 0.01–0.12**) while offering superior flexibility for extensions such as variable volatility or inverse problems. Despite training challenges (spectral bias, multi-loss instability), PINNs outperform classical paradigms for parametric extensions. These results position PINNs as a next-generation computational infrastructure for quantitative finance, combining mathematical rigor and scalability.
 
 **Keywords:** Black-Scholes equation, Physics-Informed Neural Networks, option pricing, finite difference methods, Monte Carlo simulation, deep learning.
 
@@ -59,6 +58,7 @@ Abstract i
 5 Results and Comparative Analysis 10
 
 5.1 Experimental Setup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10 
+
 5.2 Performance Comparison . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11  
 5.3 Visual Results . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
 
@@ -105,7 +105,7 @@ Appendix: Code Implementation 15
 
 In financial mathematics, derivative pricing models are essential for risk management and understanding market behavior. The Black-Scholes model stands as a cornerstone in this field, providing a closed-form solution for European options through a partial differential equation (PDE) derived from stochastic calculus.
 
-However, the model's simplifying assumptions — particularly constant volatility — and the growing complexity of financial instruments limit its practical application in modern markets. Traditional numerical methods like finite differences and Monte Carlo simulations, while well established, face challenges with high-dimensional problems, complex boundary conditions, and computational efficiency.
+However, the model's simplifying assumptions particularly constant volatility and the growing complexity of financial instruments limit its practical application in modern markets. Traditional numerical methods like finite differences and Monte Carlo simulations, while well established, face challenges with high-dimensional problems, complex boundary conditions, and computational efficiency.
 
 The emergence of deep learning has introduced powerful new approaches for solving PDEs. Physics-Informed Neural Networks (PINNs) represent a particularly promising framework that embeds the governing PDE directly into the neural network's loss function. This creates a mesh-free solver that combines the flexibility of deep learning with the mathematical rigor of physical constraints.
 
@@ -130,32 +130,32 @@ To address this question, the following sub-questions are considered:
 
 The Black-Scholes PDE for a European call option is given by:
 
-\[
+$$
 \frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 S^2 \frac{\partial^2 V}{\partial S^2} + rS \frac{\partial V}{\partial S} - rV = 0
-\]
+$$
 
 with terminal condition:
-\[
+$$
 V(S,T) = \max(S - K, 0)
-\]
+$$
 
 and boundary conditions:
-\[
+$$
 V(0,t) = 0, \quad \lim_{S \to \infty} V(S,t) = S - Ke^{-r(T-t)}
-\]
+$$
 
 ## 2.2 Analytical Solution
 
 The closed-form solution is:
 
-\[
+$$
 V(S,t) = S\Phi(d_1) - Ke^{-r(T-t)}\Phi(d_2)
-\]
+$$
 
 where:
-\[
+$$
 d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)(T-t)}{\sigma\sqrt{T-t}}, \quad d_2 = d_1 - \sigma\sqrt{T-t}
-\]
+$$
 
 ---
 
@@ -268,8 +268,10 @@ Finally, I would like to express my profound gratitude to AIMS and the Mastercar
 
 This repository contains the Python code of the algorithms studied in this thesis.
 
+---
 ## Repository Structure
 
+```bash
 My_Thesis/
 ├── README.md
 ├── LICENSE
