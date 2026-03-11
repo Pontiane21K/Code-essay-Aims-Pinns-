@@ -21,7 +21,7 @@
 
 > **Supervised by:** Dr. Yaé Olatoundji Gaba
 > <br>
-> AI Research and Innovation Nexus for Africa (AIRINA) · AIRINA Labs by AI.Technipreneurs · Cotonou, Bénin
+> AI Research and Innovation Nexus for Africa (AIRINA) · [AIRINA Labs](https://airina-labs.github.io/AIRINA-Labs/) by [AI.Technipreneurs](https://github.com/ai-technipreneurs) · Cotonou, Bénin
 
 <br>
 
